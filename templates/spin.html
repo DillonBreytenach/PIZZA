@@ -26,7 +26,7 @@
 
 
 	<!-- ORDER MODAL -->
-    <div  class="bg-modal">
+    <div  class="bg-modal" id="bg-modal">
         <div class="modal-content" id="modal-content" >
             <div class="close" id="close">+</div>
             <form method="POST">
@@ -61,38 +61,35 @@
 				<div class="small_pizza">
 					<div class="selected">
 						<label class="client-addr-lb">SMALL</label>
-						<input name="small_pizza" type="checkbox">
+						<!--input name="small_pizza" type="checkbox"-->
 					</div>
 					<div class="quants">
-						<input class="small_pizza_q" type="number" name="quantity" value="0">
-						<div id="sub_small" class="sub_small">-</div>
-						<div id="add_small" class="add_small">+</div>
+						<input id="spq" class="small_pizza_q" type="number" name="spq" value="0" min="0" max="25">
+						<div id="sub_small" class="sub_">-</div>
+						<div id="add_small" class="add_">+</div>
 					</div>
 				</div>
 				<div class="medium_pizza">
 					<div class="selected">
 						<label class="client-addr-lb">MEDIUM</label>
-						<input name="medium_pizza" type="checkbox">
+						<!--input name="medium_pizza" type="checkbox"-->
 					</div>	
 					<div class="quants">
-						<input class="medium_pizza_q" type="number" name="quantity" value="0">
-						<div id="sub_med" class="sub_med">-</div>
-						<div id="add_med" class="add_med">+</div>
+						<input  id="mpq" class="medium_pizza_q" type="number" name="mpq" value="0" min="0" max="25">
+						<div id="sub_med" class="sub_">-</div>
+						<div id="add_med" class="add_">+</div>
 					</div>
 				</div>
 				<div class="large_pizza">
 					<div class="selected">
 						<label class="client-addr-lb">LARGE</label>
-						<input name="large_pizza" type="checkbox">
+						<!--input name="large_pizza" type="checkbox"-->
 					</div>
 					<div class="quants">
-						<input class="large_pizza_q" type="number" name="quantity" value="0">
-						<div id="sub_lar" class="sub_lar">-</div>
-						<div id="add_lar" class="add_lar">+</div>
+						<input id="lpq" class="large_pizza_q" type="number" name="lpq" value="0" min="0" max="25">
+						<div id="sub_lar" class="sub_">-</div>
+						<div id="add_lar" class="add_">+</div>
 					</div>
-
-
-
 				</div>
 				<div class="calc">
 					TOTAL = R {{ price_ }}
@@ -107,5 +104,9 @@
 	</div>
 
 </section>
+
+<script src="../static/js/spin.js">
+
+</script>
 
 {% endblock %}
